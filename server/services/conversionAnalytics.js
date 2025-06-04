@@ -1,7 +1,13 @@
+const Job = require('../models/Job');
+
+async function updateAnalytics() {
+  const totalProposals = await Job.countDocuments({ status: 'bid_sent' });
+  console.log('Total proposals sent', totalProposals);
+}
+
 function startAnalytics() {
   setInterval(() => {
-    console.log('Updating conversion analytics...');
-    // TODO: fetch updates from Upwork
+    updateAnalytics().catch((err) => console.error(err));
   }, 300000);
 }
 

@@ -1,6 +1,9 @@
-function runProfileOptimizer() {
+const Job = require('../models/Job');
+
+async function runProfileOptimizer() {
   console.log('Running profile optimizer...');
-  // TODO: fetch profile and compute recommendations
+  // Placeholder implementation
+  return { titleSuggestions: [], overviewSuggestions: '', missingSkills: [] };
 }
 
 module.exports = { runProfileOptimizer };

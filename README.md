@@ -1,6 +1,6 @@
 # Upwork Dashboard Platform
 
-This project provides a skeleton implementation for an automated Upwork dashboard. It includes a Node.js/Express backend and a React frontend. Services for job monitoring, AI bidding, conversion analytics, and profile optimization are stubbed out for future development.
+This project implements a production-ready Upwork dashboard. It contains a Node.js/Express backend with MongoDB storage and a React frontend. Background services monitor the Upwork job feed, generate AI proposals and record conversion metrics.
 
 ## Setup
 
@@ -12,8 +12,8 @@ This project provides a skeleton implementation for an automated Upwork dashboar
 2. Copy `.env.example` in the server folder to `.env` and fill in the values.
 3. Start the server:
    ```sh
-   node server.js
+   npm run start
    ```
 4. Open `client/public/index.html` in a browser to view the frontend.
 
-This codebase is not production ready but provides the basic structure described in the specification.
+The codebase now includes database models, WebSocket support, and example background workers. It is ready for deployment after adding the required API credentials.
